@@ -1,7 +1,8 @@
 {
     "variables": {
         "aws_access_key": "{{env `AWS_ACCESS_KEY_ID`}}",
-        "aws_secret_key": "{{env `AWS_SECRET_ACCESS_KEY`}}"
+        "aws_secret_key": "{{env `AWS_SECRET_ACCESS_KEY`}}",
+        "ami_name": ""
       },
     "builders": 
     [
@@ -9,7 +10,7 @@
             "access_key": "{{user `aws_access_key`}}",
             "secret_key": "{{user `aws_secret_key`}}",
             "region": "eu-central-1",
-            "ami_name": "packer-Ubuntu-20.04LTS-Prometheus",
+            "ami_name": "{{ user `ami_name`}}",
             "ssh_username": "ubuntu",
             "type": "amazon-ebs",
             "instance_type": "t2.micro",
@@ -36,7 +37,8 @@
                 "owners": ["099720109477"],
                 "most_recent": true,
                 "ami_virtualization_type": "hvm"
-            }
+            },
+            "user_data_file": "user-data"
         }
     ]
 }
