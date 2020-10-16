@@ -14,14 +14,13 @@
             "ssh_username": "ubuntu",
             "type": "amazon-ebs",
             "instance_type": "t2.micro",
-            "delete_on_termination": true,
             "subnet_filter": {
                 "filters": {
                     "tag:Name": "private"
                 }
             },
             "vpc_filter": {
-                "filter": {
+                "filters": {
                     "tag:Name": "p001-vpc"
                 }
             },
@@ -30,13 +29,12 @@
             },
             "source_ami_filter": {
                 "filters": {
-                "virtualization-type": "hvm",
-                "name": "ubuntu/images/*ubuntu-focal-20.04-amd64-server-*",
-                "root-device-type": "ebs"
+                    "virtualization-type": "hvm",
+                    "name": "ubuntu/images/*ubuntu-focal-20.04-amd64-server-*",
+                    "root-device-type": "ebs"
                 },
                 "owners": ["099720109477"],
-                "most_recent": true,
-                "ami_virtualization_type": "hvm"
+                "most_recent": true
             },
             "user_data_file": "user-data"
         }
