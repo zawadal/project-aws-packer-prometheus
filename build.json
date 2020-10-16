@@ -36,7 +36,7 @@
                 "most_recent": true
             },
             "user_data_file": "user-data",
-            "ssh_username": "ec2-user",
+            "ssh_username": "ubuntu",
             "communicator": "ssh"
         }
     ]
