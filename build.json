@@ -15,7 +15,7 @@
             "instance_type": "t2.micro",
             "subnet_filter": {
                 "filters": {
-                    "tag:Name": "private"
+                    "tag:Name": "public"
                 }
             },
             "vpc_filter": {
@@ -37,9 +37,7 @@
             },
             "user_data_file": "user-data",
             "ssh_username": "ec2-user",
-            "ssh_interface": "session_manager",
             "communicator": "ssh",
-            "iam_instance_profile": "ssm_profile"
         }
     ]
 }
