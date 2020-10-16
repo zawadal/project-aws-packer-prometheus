@@ -11,7 +11,6 @@
             "secret_key": "{{user `aws_secret_key`}}",
             "region": "eu-central-1",
             "ami_name": "{{ user `ami_name`}}",
-            "ssh_username": "ubuntu",
             "type": "amazon-ebs",
             "instance_type": "t2.micro",
             "subnet_filter": {
@@ -36,7 +35,11 @@
                 "owners": ["099720109477"],
                 "most_recent": true
             },
-            "user_data_file": "user-data"
+            "user_data_file": "user-data",
+            "ssh_username": "ec2-user",
+            "ssh_interface": "session_manager",
+            "communicator": "ssh",
+            "iam_instance_profile": "ssm_profile"
         }
     ]
 }
