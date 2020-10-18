@@ -41,6 +41,11 @@
     ],
     "provisioners": [
         {
+            "type": "file",
+            "source": "prometheus.yml",
+            "destination": "prometheus.yml"
+        },
+        {
           "type": "shell-local",
           "script": "./user-data.sh"
         }
