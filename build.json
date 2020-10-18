@@ -35,9 +35,15 @@
                 "owners": ["099720109477"],
                 "most_recent": true
             },
-            "user_data_file": "./user-data",
             "ssh_username": "ubuntu",
             "communicator": "ssh"
         }
-    ]
+    ],
+    "provisioners": [
+        {
+          "type": "shell-local",
+          "script": "./user-data.sh"
+        }
+      ]
+    }
 }
