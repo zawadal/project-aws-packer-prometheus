@@ -46,7 +46,12 @@
             "destination": "prometheus.yml"
         },
         {
-          "type": "shell-local",
+            "type": "file",
+            "source": "user-data.sh",
+            "destination": "user-data.sh"
+        },
+        {
+          "type": "shell",
           "script": "./user-data.sh"
         }
       ]
