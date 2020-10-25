@@ -1,6 +1,6 @@
 --- 
 - name: Trigger CIS update
-  hosts: all
+  hosts: default
   become: yes
   tasks:
   - name: Include role
