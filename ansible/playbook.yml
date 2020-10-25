@@ -1,0 +1,9 @@
+--- 
+- name: Trigger for CIS update
+  hosts: all
+  become: yes
+  tasks:
+  - name: Include role
+    include_role:
+      name: ubuntu2004_cis
+  
