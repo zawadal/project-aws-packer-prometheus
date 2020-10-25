@@ -58,8 +58,4 @@ resource "aws_instance" "web" {
     Name = "project001-instance"
   }
 
-   provisioner "local-exec" {
-    command = "echo The server's IP address is ${self.private_ip} > myip.txt"
-  }
-
 }

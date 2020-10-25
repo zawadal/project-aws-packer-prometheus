@@ -1,1 +1,0 @@
-The server's IP address is 10.10.2.43 
