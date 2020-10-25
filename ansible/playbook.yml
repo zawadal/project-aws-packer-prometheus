@@ -5,5 +5,5 @@
   tasks:
   - name: Include role
     include_role:
-      name: ubuntu2004_cis
+      name: cis-ubuntu-2004
   
