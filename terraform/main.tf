@@ -58,6 +58,8 @@ resource "aws_instance" "web" {
     Name = "project001-instance"
   }
 
-  user_data = "${file("prometheus.sh")}"
+  provisioner "remote-exec" {
+    script = "prometheus.sh"
+  }
 
 }
