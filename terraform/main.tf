@@ -58,9 +58,6 @@ resource "aws_instance" "web" {
     Name = "project001-instance"
   }
 
-  user_data = <<EOF
-	    #!/bin/bash
-      cd prometheus-2.22.0.linux-amd64
-      ./prometheus --config.file prometheus.yml &
-	EOF
+  user_data = "${file("prometheus.sh")}"
+
 }
