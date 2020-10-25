@@ -59,7 +59,8 @@ resource "aws_instance" "web" {
   }
 
   user_data = << EOF
-		#! /bin/bash
-    cd prometheus-2.22.0.linux-amd64 && ./prometheus --config.file prometheus.yml &
+	    #!/bin/bash
+      cd prometheus-2.22.0.linux-amd64
+      ./prometheus --config.file prometheus.yml &
 	EOF
 }
