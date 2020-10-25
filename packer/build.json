@@ -57,7 +57,8 @@
         {
               "type": "ansible",
               "playbook_file": "../ansible/playbook.yml",
-              "ansible_env_vars": [ "ANSIBLE_HOST_KEY_CHECKING=False"]
+              "ansible_env_vars": [ "ANSIBLE_HOST_KEY_CHECKING=False"],
+              "use_proxy": false
 
         }
       ]
