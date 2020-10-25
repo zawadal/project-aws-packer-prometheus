@@ -58,6 +58,6 @@ resource "aws_instance" "web" {
     Name = "project001-instance"
   }
 
-  user_data   = "cd prom* && ./prometheus --config.file prometheus.yml &"
+  user_data   = "cd prometheus-2.22.0.linux-amd64 && ./prometheus --config.file prometheus.yml &"
 
 }
