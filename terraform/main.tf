@@ -53,7 +53,8 @@ resource "aws_instance" "web" {
   instance_type = "t2.micro"
   subnet_id = data.terraform_remote_state.awsstate.outputs.publicnetid
   vpc_security_group_ids = list(data.terraform_remote_state.awsstate.outputs.secgroupid)
-
+  user_data = file("prometheus.sh")
+  
   tags = {
     Name = "project001-instance"
   }
