@@ -1,5 +1,5 @@
 --- 
-- name: Trigger for CIS update
+- name: Trigger CIS update
   hosts: all
   become: yes
   tasks:

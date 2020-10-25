@@ -53,6 +53,10 @@
         {
           "type": "shell",
           "script": "./user-data.sh"
+        },
+        {
+              "type": "ansible",
+              "playbook_file": "../ansible/playbook.yml"
         }
       ]
 
