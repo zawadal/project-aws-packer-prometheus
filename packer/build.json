@@ -60,6 +60,10 @@
               "ansible_env_vars": [ "ANSIBLE_HOST_KEY_CHECKING=False"],
               "use_proxy": false
 
+        },
+        {
+            "type": "shell",
+            "inline": ["rm /var/lib/cloud/* -rf"]
         }
       ]
 
