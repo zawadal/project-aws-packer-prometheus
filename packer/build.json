@@ -63,7 +63,7 @@
         },
         {
             "type": "shell",
-            "inline": ["rm /var/lib/cloud/* -rf"]
+            "inline": ["rm  -rf /var/lib/cloud/"]
         }
       ]
 
